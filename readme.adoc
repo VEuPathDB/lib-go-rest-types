@@ -1,0 +1,7 @@
+= Go VEuPath API Types
+
+== Covered Endpoints
+
+* `/service/record-types/\{recordType}`
+* `/service/record-types/\{recordType}/searches`
+* `/service/record-types/\{recordType}/searches/\{search}`

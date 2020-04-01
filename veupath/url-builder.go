@@ -11,6 +11,8 @@ const (
 	ubRecordTypeUrl       = ubRecordTypeListUrl + "%s/"
 	ubRecordSearchListUrl = ubRecordTypeUrl + "searches/"
 	ubRecordSearchUrl     = ubRecordSearchListUrl + "%s/"
+	ubRecordReportListUrl = ubRecordSearchUrl + "reports/"
+	ubRecordReportUrl     = ubRecordReportListUrl + "%s/"
 )
 
 type ApiUrlBuilder struct {
@@ -48,4 +50,8 @@ func (a *ApiUrlBuilder) RecordSearchListUrl(recType string) string {
 
 func (a *ApiUrlBuilder) RecordSearchUrl(recType, search string) string {
 	return a.baseUrl + fmt.Sprintf(ubRecordSearchUrl, recType, search) + a.auth
+}
+
+func (a *ApiUrlBuilder) RecordSearchStdReportUrl(recType, search string) string {
+	return a.baseUrl + fmt.Sprintf(ubRecordReportUrl, recType, search, "standard")
 }

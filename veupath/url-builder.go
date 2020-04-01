@@ -53,5 +53,5 @@ func (a *ApiUrlBuilder) RecordSearchUrl(recType, search string) string {
 }
 
 func (a *ApiUrlBuilder) RecordSearchStdReportUrl(recType, search string) string {
-	return a.baseUrl + fmt.Sprintf(ubRecordReportUrl, recType, search, "standard")
+	return a.baseUrl + fmt.Sprintf(ubRecordReportUrl, recType, search, "standard") + a.auth
 }

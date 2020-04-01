@@ -19,8 +19,8 @@ type Search struct {
 	DefaultSummaryView                   string      `json:"defaultSummaryView"`
 	SummaryViewPlugins                   []Plugin    `json:"summaryViewPlugins"`
 	IsAnalyzable                         bool        `json:"isAnalyzable"`
-	AllowedPrimaryInputRecordClassNames  string      `json:"allowedPrimaryInputRecordClassNames"`
-	AllowedSecondaryInputRecordClassName string      `json:"allowedSecondaryInputRecordClassName"`
+	AllowedPrimaryInputRecordClassNames  []string    `json:"allowedPrimaryInputRecordClassNames"`
+	AllowedSecondaryInputRecordClassName []string    `json:"allowedSecondaryInputRecordClassName"`
 	QueryName                            string      `json:"queryName"`
 	NoSummaryOnSingleRecord              bool        `json:"noSummaryOnSingleRecord"`
 	Properties                           Properties  `json:"properties"`

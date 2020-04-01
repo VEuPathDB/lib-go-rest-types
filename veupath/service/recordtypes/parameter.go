@@ -1,5 +1,7 @@
 package recordtypes
 
+import "encoding/json"
+
 type Parameter struct {
 	Name                string   `json:"name"`
 	DisplayName         string   `json:"displayName"`
@@ -66,7 +68,6 @@ type Parameter struct {
 	//
 	// EnumParamFormatter & TreeBoxEnumParamFormatter
 	//
-	Vocabulary []byte `json:"vocabulary"`
-
+	Vocabulary json.RawMessage `json:"vocabulary"`
 }
 

@@ -18,56 +18,54 @@ type Parameter struct {
 	//
 	// DatasetParamFormatter
 	//
-	DefaultIdList   *string  `json:"defaultIdList"`
-	RecordClassName *string  `json:"recordClassName"`
-	Parsers         []Parser `json:"parsers"`
+	DefaultIdList   *string  `json:"defaultIdList,omitempty"`
+	RecordClassName *string  `json:"recordClassName,omitempty"`
+	Parsers         []Parser `json:"parsers,omitempty"`
 
 	//
 	// DateParamFormatter & DateRangeParamFormatter
 	//
-	MinDate *string `json:"minDate"`
-	MaxDate *string `json:"maxDate"`
+	MinDate *string `json:"minDate,omitempty"`
+	MaxDate *string `json:"maxDate,omitempty"`
 
 	//
 	// EnumParamFormatter
 	//
-	DisplayType      *string `json:"displayType"`
-	MaxSelectedCount *int    `json:"maxSelectedCount"`
-	MinSelectedCount *int    `json:"minSelectedCount"`
+	DisplayType      *string `json:"displayType,omitempty"`
+	MaxSelectedCount *int    `json:"maxSelectedCount,omitempty"`
+	MinSelectedCount *int    `json:"minSelectedCount,omitempty"`
 	//Vocabulary       [][3]string `json:"vocabulary"`
 
 	//
 	// FilterParamNewFormatter
 	//
-	FilterDataTypeDisplayName *string             `json:"filterDataTypeDisplayName"`
-	Ontology                  []Ontology          `json:"ontology"`
-	Values                    map[string][]string `json:"values"`
-	HideEmptyOntologyNodes    *bool               `json:"hideEmptyOntologyNodes"`
-	SortLeavesBeforeBranches  *bool               `json:"sortLeavesBeforeBranches"`
-	CountPredictsAnswerCount  *bool               `json:"countPredictsAnswerCount"`
+	FilterDataTypeDisplayName *string             `json:"filterDataTypeDisplayName,omitempty"`
+	Ontology                  []Ontology          `json:"ontology,omitempty"`
+	Values                    map[string][]string `json:"values,omitempty"`
+	HideEmptyOntologyNodes    *bool               `json:"hideEmptyOntologyNodes,omitempty"`
+	SortLeavesBeforeBranches  *bool               `json:"sortLeavesBeforeBranches,omitempty"`
+	CountPredictsAnswerCount  *bool               `json:"countPredictsAnswerCount,omitempty"`
 	// MinSelectedCount int `json:"minSelectedCount"`
 
 	//
 	// NumberParamFormatter & NumberRangeFormatter
 	//
-	MinValue  *float64 `json:"minValue"`
-	MaxValue  *float64 `json:"maxValue"`
-	Increment *float64 `json:"increment"`
+	MinValue  *float64 `json:"minValue,omitempty"`
+	MaxValue  *float64 `json:"maxValue,omitempty"`
+	Increment *float64 `json:"increment,omitempty"`
 
 	//
 	// StringParamFormatter
 	//
-	Length *int `json:"length"`
+	Length *int `json:"length,omitempty"`
 
 	//
 	// TreeBoxEnumParamFormatter
 	//
 	//Vocabulary       EnumParamTermNode `json:"vocabulary"`
 
-
 	//
 	// EnumParamFormatter & TreeBoxEnumParamFormatter
 	//
-	Vocabulary json.RawMessage `json:"vocabulary"`
+	Vocabulary json.RawMessage `json:"vocabulary,omitempty"`
 }
-

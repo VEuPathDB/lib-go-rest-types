@@ -8,9 +8,9 @@ type Search struct {
 	Description                          string      `json:"description"`
 	IconName                             string      `json:"iconName"`
 	Summary                              string      `json:"summary"`
-	Help                                 string      `json:"help"`
-	NewBuild                             string      `json:"newBuild"`
-	ReviseBuild                          string      `json:"reviseBuild"`
+	Help                                 *string     `json:"help,omitempty"`
+	NewBuild                             *string     `json:"newBuild,omitempty"`
+	ReviseBuild                          *string     `json:"reviseBuild,omitempty"`
 	OutputRecordClassName                string      `json:"outputRecordClassName"`
 	Filters                              []Filter    `json:"filters"`
 	DefaultAttributes                    []string    `json:"defaultAttributes"`

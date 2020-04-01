@@ -1,8 +1,8 @@
 package recordtypes
 
 type Attribute struct {
-	Align          string        `json:"align"`
-	DisplayName    string        `json:"displayName"`
+	Align          string     `json:"align"`
+	DisplayName    string     `json:"displayName"`
 	Formats        []Format   `json:"formats"`
 	Help           string     `json:"help"`
 	IsDisplayable  bool       `json:"isDisplayable"`

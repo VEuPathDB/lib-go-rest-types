@@ -29,7 +29,11 @@ func NewApiUrlBuilder(baseUrl string) ApiUrlBuilder {
 }
 
 func (a *ApiUrlBuilder) SetAuthTkt(auth string) {
-	a.auth = "?auth_tkt=" + auth
+	if len(auth) > 0 {
+		a.auth = "?auth_tkt=" + auth
+	} else {
+		a.auth = ""
+	}
 }
 
 func (a *ApiUrlBuilder) ServiceUrl() string {

@@ -1,4 +1,4 @@
-package recordtypes
+package service
 
 type Plugin struct {
 	DisplayName string `json:"displayName"`

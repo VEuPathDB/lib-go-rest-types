@@ -1,4 +1,4 @@
-package recordtypes
+package service
 
 type Search struct {
 	UrlSegment                           string      `json:"urlSegment"`

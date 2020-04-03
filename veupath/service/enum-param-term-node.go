@@ -1,4 +1,4 @@
-package recordtypes
+package service
 
 type EnumParamTermNode struct {
 	Data struct {

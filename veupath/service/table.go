@@ -1,4 +1,4 @@
-package recordtypes
+package service
 
 type Table struct {
 	IsInReport     bool             `json:"isInReport"`

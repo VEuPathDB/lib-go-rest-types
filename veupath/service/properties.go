@@ -1,4 +1,4 @@
-package recordtypes
+package service
 
 type Properties struct {
 	SpecificAttribution []string `json:"specificAttribution"`

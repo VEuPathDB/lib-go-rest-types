@@ -1,4 +1,4 @@
-package recordtypes
+package service
 
 type Tools struct {
 	Reports []string `json:"reports"`

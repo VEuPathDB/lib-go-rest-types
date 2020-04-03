@@ -1,4 +1,4 @@
-package recordtypes
+package service
 
 type Ontology struct {
 	Term      string `json:"term"`

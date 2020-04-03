@@ -1,4 +1,4 @@
-package recordtypes
+package service
 
 type Attribute struct {
 	Align          string     `json:"align"`

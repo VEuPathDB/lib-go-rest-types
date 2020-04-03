@@ -1,4 +1,4 @@
-package recordtypes
+package service
 
 type Validation struct {
 	Level   string `json:"level"`

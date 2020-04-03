@@ -1,4 +1,4 @@
-package recordtypes
+package service
 
 type Group struct {
 	DisplayType string   `json:"displayType"`

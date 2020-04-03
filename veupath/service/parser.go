@@ -1,4 +1,4 @@
-package recordtypes
+package service
 
 type Parser struct {
 	Name        string `json:"name"`

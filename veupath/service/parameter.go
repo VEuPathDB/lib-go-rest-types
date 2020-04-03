@@ -1,4 +1,4 @@
-package recordtypes
+package service
 
 import "encoding/json"
 

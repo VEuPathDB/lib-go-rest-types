@@ -1,4 +1,4 @@
-package recordtypes
+package service
 
 type Filter struct {
 	DisplayName string `json:"displayName"`

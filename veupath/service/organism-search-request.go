@@ -1,12 +1,8 @@
-package recordtypes
+package service
 
 type OrganismSearchRequest struct {
 	SearchConfig SearchConfig `json:"searchConfig"`
 	ReportConfig ReportConfig `json:"reportConfig"`
-}
-
-type SearchConfig struct {
-	Parameters map[string]string `json:"parameters"`
 }
 
 type ReportConfig struct {

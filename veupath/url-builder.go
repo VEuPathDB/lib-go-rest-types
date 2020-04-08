@@ -6,18 +6,23 @@ import (
 )
 
 const (
-	ubServiceUrl          = "service/"
+	ubServiceUrl = "service/"
+
+	// Record-type API
 	ubRecordTypeListUrl   = ubServiceUrl + "record-types/"
 	ubRecordTypeUrl       = ubRecordTypeListUrl + "%s/"
 	ubRecordSearchListUrl = ubRecordTypeUrl + "searches/"
 	ubRecordSearchUrl     = ubRecordSearchListUrl + "%s/"
 	ubRecordReportListUrl = ubRecordSearchUrl + "reports/"
 	ubRecordReportUrl     = ubRecordReportListUrl + "%s/"
+
+	ubStratLists   = ubServiceUrl + "strategy-lists/"
+	ubPublicStrats = ubStratLists + "public/"
 )
 
 type ApiUrlBuilder struct {
 	baseUrl string
-	auth string
+	auth    string
 }
 
 func NewApiUrlBuilder(baseUrl string) ApiUrlBuilder {
@@ -58,4 +63,8 @@ func (a *ApiUrlBuilder) RecordSearchUrl(recType, search string) string {
 
 func (a *ApiUrlBuilder) RecordSearchStdReportUrl(recType, search string) string {
 	return a.baseUrl + fmt.Sprintf(ubRecordReportUrl, recType, search, "standard") + a.auth
+}
+
+func (a *ApiUrlBuilder) PublicStrategiesUrl() string {
+	return a.baseUrl + ubPublicStrats
 }

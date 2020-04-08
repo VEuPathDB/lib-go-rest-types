@@ -6,7 +6,14 @@ import (
 )
 
 const (
+	currentUser = "current"
+
 	ubServiceUrl = "service/"
+
+	// User API
+	ubUserListUrl = ubServiceUrl + "users/"
+	ubUserUrl     = ubUserListUrl + "%s/"
+	ubUserStrats  = ubUserUrl + "strategies/"
 
 	// Record-type API
 	ubRecordTypeListUrl   = ubServiceUrl + "record-types/"
@@ -66,5 +73,13 @@ func (a *ApiUrlBuilder) RecordSearchStdReportUrl(recType, search string) string 
 }
 
 func (a *ApiUrlBuilder) PublicStrategiesUrl() string {
-	return a.baseUrl + ubPublicStrats
+	return a.baseUrl + ubPublicStrats + a.auth
+}
+
+func (a *ApiUrlBuilder) CurrentUserUrl() string {
+	return a.baseUrl + fmt.Sprintf(ubUserUrl, currentUser) + a.auth
+}
+
+func (a *ApiUrlBuilder) CurrentUserStrategiesUrl() string {
+	return a.baseUrl + fmt.Sprintf(ubUserStrats, currentUser) + a.auth
 }

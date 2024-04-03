@@ -1,2 +1,4 @@
+github.com/Foxcapades/Go-ChainRequest v2.7.4+incompatible h1:hUmvv11pLn3oNv8LSom8EDlwS/imErSKQi2cfwmxfYM=
 github.com/Foxcapades/Go-ChainRequest v2.7.4+incompatible/go.mod h1:sKBa2PYX7hjF4rQLnUKUPj2QuhTUm417vKB/oqDeXJE=
+github.com/vulpine-io/httpx v1.0.0 h1:nh752rz+GB1donWFQFTFhmDz9KaRKB8iATjGwU5ki4I=
 github.com/vulpine-io/httpx v1.0.0/go.mod h1:hJI4/BjDASA7PVYRPMCiG3OcBWgpNvmlmdT2Btw/5AQ=

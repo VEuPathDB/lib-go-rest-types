@@ -1,4 +1,4 @@
-module lib-go-rest-types
+module github.com/veupathdb/lib-go-rest-types
 
 go 1.22
 
